@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CodeMate - 개발 보조 챗봇</title>
+  <link rel="stylesheet" href="style.css" />
+  <script defer src="main.js"></script>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>CodeMate</h1>
+      <p>원하는 웹 아이디어를 말하면 코드로 보여줄게요.</p>
+    </header>
+
+    <main>
+      <section class="chat-box">
+        <input type="text" id="questionInput" placeholder="예: 로그인 페이지 만들고 싶어" />
+        <button id="sendBtn">요청</button>
+      </section>
+
+      <section id="responseArea" class="response hidden">
+        <div class="tabs">
+          <button data-lang="html">HTML</button>
+          <button data-lang="css">CSS</button>
+          <button data-lang="js">JS</button>
+        </div>
+        <div class="code-display">
+          <pre><code id="codeBlock">// 여기에 코드가 표시됩니다.</code></pre>
+          <button id="copyBtn">복사</button>
+        </div>
+      </section>
+
+      <section class="history">
+        <h3>📂 이전 대화</h3>
+        <ul id="historyList"></ul>
+      </section>
+    </main>
+  </div>
+</body>
+</html>
